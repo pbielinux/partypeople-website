@@ -2,92 +2,68 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Button } from '../ui/Button';
+import Image from 'next/image';
 
-const Navbar = () => {
-  const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+type NavProps = {
+    navItems: { name: string; path: string }[];
+    pathname: string;
+    isMenuOpen: boolean;
+    onToggle: () => void;
+};
 
-  const navItems = [
-    { name: 'WORK', path: '/work' },
-    { name: 'SERVICES', path: '/services' },
-    { name: 'STUDIO', path: '/studio' },
-    { name: 'CAREERS', path: '/careers' },
-    { name: 'PLAYROOM', path: '/playroom' },
-  ];
+const Navbar: React.FC<NavProps> = ({ navItems, pathname, isMenuOpen, onToggle }) => {
+    return (
+        <nav className="fixed top-0 left-0 w-full bg-white z-50">
+            <div className="h-14 md:h-20 flex items-center justify-between py-4 px-4">
+                {/* Mobile menu button */}
+                <div className="lg:hidden">
+                    <Button onClick={onToggle}>
+                        <p className="text-gray-800 text-xs md:text-sm min-w-[60px] font-medium">
+                            {isMenuOpen ? 'CLOSE' : 'MENU'}
+                        </p>
+                    </Button>
+                </div>
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+                {/* Logo */}
+                <div className="flex flex-row justify-center items-center space-x-2">
+                    <Image
+                        className='hidden lg:block'
+                        src="/images/icon-head.png"
+                        alt="PartyPeople Head Logo"
+                        width={40}
+                        height={40}
+                    />
+                    <Link href="/" className="text-gray-800 text-xs font-semibold">
+                        PARTY PEOPLE © 2025
+                    </Link>
+                </div>
 
-  return (
-    <nav className="bg-white py-4 px-4 md:px-6">
-      <div className="flex items-center justify-between">
-        {/* Mobile menu button */}
-        <div className="lg:hidden">
-          <button onClick={toggleMenu} className="border border-gray-300 rounded px-3 py-1">
-            MENU
-          </button>
-        </div>
+                {/* Desktop Navigation Items */}
+                <div className="hidden lg:flex space-x-6 flex-1 justify-center">
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.path}
+                            className={`${pathname === item.path
+                                ? 'text-blue-600'
+                                : 'text-gray-700 hover:text-blue-600'
+                                } transition-colors duration-300`}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+                </div>
 
-        {/* Logo */}
-        <div className="flex-shrink-0 md:flex-1">
-          <Link href="/" className="text-gray-800 text-1xl font-medium">
-            ANALOGUE © 2025
-          </Link>
-        </div>
-
-        {/* Desktop Navigation Items */}
-        <div className="hidden md:flex space-x-6 flex-1 justify-center">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.path}
-              className={`${
-                pathname === item.path
-                  ? 'text-blue-600'
-                  : 'text-gray-700 hover:text-blue-600'
-              } transition-colors duration-300`}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-
-        {/* Connect Button */}
-        <div className="flex-shrink-0">
-          <Link
-            href="/connect"
-            className="border border-gray-800 rounded px-4 py-1 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300"
-          >
-            CONNECT
-          </Link>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden mt-4 py-2 border-t border-gray-200">
-          <div className="flex flex-col space-y-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                className={`${
-                  pathname === item.path
-                    ? 'text-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
-                } transition-colors duration-300 px-2`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
-  );
+                {/* Connect Button */}
+                <div className="flex">
+                    <Button onClick={() => console.log('Menu clicked')}>
+                        <p className="text-gray-800 text-xs font-medium">CONNECT</p>
+                    </Button>
+                </div>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;

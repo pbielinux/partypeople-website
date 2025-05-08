@@ -1,17 +1,24 @@
-import Link from 'next/link';
+'use client';
+
+import { motion } from 'framer-motion';
 import React from 'react';
 
-const Button = ({ children, onClick }) => {
-  return (
-    <div>
-          <Link href="/connect" className="relative inline-block">
-            <div className="absolute inset-0 bg-black translate-x-1 translate-y-1 rounded"></div>
-            <button onClick={onClick} className="relative px-6 py-2 bg-white border-2 border-black rounded font-medium hover:bg-gray-100 transition-colors">
-              CONNECT
-            </button>
-          </Link>
-    </div>
-  );
+type ButtonProps = {
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
 };
 
-export default Button;
+export const Button: React.FC<ButtonProps> = ({ children, onClick, className }) => {
+  return (
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
+      className={`relative inline-flex items-center justify-center px-2 py-1 font-semibold text-black bg-white border-2 border-black rounded-md
+                  shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-all hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] active:shadow-[2px_2px_0_0_rgba(0,0,0,1)]
+                  ${className ?? ''}`}
+    >
+      {children}
+    </motion.button>
+  );
+};

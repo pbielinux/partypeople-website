@@ -8,9 +8,12 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      sm: "340px",
-      md: "768px",
-      lg: "1024px",
+      xxs: '320px',   // Very small phones (old iPhones, Androids)
+      xs: '480px',   // Small phones
+      sm: '640px',   // Regular phones
+      md: '768px',   // Tablets (portrait)
+      lg: '1024px',  // Tablets (landscape) or small laptops
+      xl: '1280px',  // Desktops
     },
     extend: {
       fontFamily: {
@@ -37,7 +40,13 @@ const config: Config = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         }
-      }
+      },
+      transitionTimingFunction: {
+        'in-out-smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      transitionDuration: {
+        '500': '500ms',
+      },
     },
   },
   plugins: [],
