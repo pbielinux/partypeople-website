@@ -10,6 +10,7 @@ import MobileMenu from '@/components/layout/MobileMenu';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import VideoSection from '@/sections/VideoSection';
+import Marquee from '@/components/ui/Marquee';
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       <AboutSection />
       <PastEventsSection />
       <CTASection />
+      <Marquee />
       <Footer />
     </div>
   );
