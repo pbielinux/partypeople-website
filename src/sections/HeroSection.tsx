@@ -5,10 +5,8 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="bg-white py-16 relative">
-
-      
-      <div className="max-w-6xl w-full text-center space-y-8">
+    <section className="bg-white py-20 relative">
+      <div className="container mx-auto px-4 md:px-12 max-w-6xl w-full text-center space-y-8">
         {/* Logo */}
         <div className="relative inline-block mx-auto w-full max-w-[500px]">
           {/* The logo image */}
@@ -31,7 +29,7 @@ export default function HeroSection() {
         </div>
 
         {/* Text Grid */}
-        <div className="grid gap-4 pt-10 text-xl sm:text-2xl md:text-3xl font-medium leading-snug">
+        <div className="grid gap-4 pt-10 text-sm xs:text-xl md:text-3xl font-medium leading-snug">
           <div>
             <span className="inline-block align-middle">
               <Image
@@ -44,7 +42,7 @@ export default function HeroSection() {
             <span className="inline-block">
               A SERIOUSLY</span>{' '}
             <Button>
-              <span className="text-black text-xl sm:text-2xl">PLAYFUL</span>
+              <span className="text-black text-sm xs:text-xl">PLAYFUL</span>
             </Button>{' '}
             <sup>™</sup>
           </div>
@@ -74,7 +72,7 @@ export default function HeroSection() {
           <div>
             TO DANCE {' '}
             <span className="inline-block underline decoration-2 underline-offset-4">
-              ARROUND THE WORLD
+              AROUND THE WORLD
             </span>{' '}
             🌐
           </div>

@@ -17,21 +17,21 @@ interface PastEventItem {
 const pastEvents: PastEventItem[] = [
   {
     id: 'party-people-01',
-    title: 'PARTY PEOPLE @ Those Who Dance',
+    title: 'PARTY PEOPLE at Those Who Dance',
     subtitle: 'CRAFTING A CINEMATIC UNIVERSE',
     imageUrl: '/images/events/event1.jpg',
     link: '/events'
   },
   {
     id: 'electric-state',
-    title: 'PARTY PEOPLE @ Those Who Dance',
+    title: 'PARTY PEOPLE at Those Who Dance',
     subtitle: 'The Robots Are Coming',
     imageUrl: '/images/events/event2.jpg',
     link: '/events'
   },
   {
     id: 'squid-game',
-    title: 'PARTY PEOPLE @ Those Who Dance',
+    title: 'PARTY PEOPLE at Those Who Dance',
     subtitle: 'The Game Will Not Stop',
     imageUrl: '/images/events/event3.jpg',
     link: '/events'
@@ -44,8 +44,8 @@ const PastEventsSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-12">
         {/* Section Header */}
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-5xl font-medium">Past Events</h2>
-          <Link href="/events" className="text-lg hover:underline">
+          <h2 className="text-4xl sm:text-6xl font-medium">Past Events</h2>
+          <Link href="/events" className="xs:text-xl sm:text-2xl hover:underline">
             View all
           </Link>
         </div>
@@ -66,10 +66,10 @@ const PastEventsSection: React.FC = () => {
                 </div>
                 
                 {/* Event Title */}
-                <h3 className="text-3xl font-medium mb-1">{event.title}</h3>
+                <h3 className="text-xl md:text-2xl font-medium mb-1">{event.title}</h3>
                 
                 {/* Event Subtitle */}
-                <p className="text-lg">{event.subtitle}</p>
+                <p className="text-sm">{event.subtitle}</p>
               </Link>
             </div>
           ))}

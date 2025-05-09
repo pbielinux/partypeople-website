@@ -1,85 +1,84 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+
+const socials = [
+  { label: 'INSTAGRAM', href: 'https://www.instagram.com/we.partypeople/' },
+  { label: 'YOUTUBE', href: 'https://YOUTUBE.COM' },
+  { label: 'SPOTIFY', href: 'https://open.spotify.com/user/31udm6ap4q6moiyjdm3rwkgywvrm' },
+  { label: 'SOUNDCLOUD', href: 'https://soundcloud.com/partypeople-world' },
+];
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white text-black w-full">
-      <div className="container mx-auto px-4 py-8">
-        {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          {/* Logo Section */}
-          <div className="flex items-center mb-6 md:mb-0">
-            <div className="relative w-40 h-40">
-              <video
-                className="lozad pointer-events-none w-full h-full object-contain"
-                width="100%"
-                playsInline
-                muted
-                autoPlay
-                loop
-                data-loaded="true"
-              >
-                <source
-                  data-src="/videos/ring.mp4"
-                  type="video/mp4"
-                  src="/videos/ring.mp4"
-                />
-              </video>
-            </div>
-
-            {/* Brand Text */}
-            <div className="ml-4">
-              <h2 className="text-3xl font-bold tracking-tight">PARTY PEOPLE COMMUNITY ™</h2>
-              <p className="text-lg">Where creatives belong.</p>
+      <div className="container mx-auto px-4 py-20 justify-center">
+        <div className='grid grid-cols-1 lg:grid-cols-2 items-start'>
+          {/* Newsletter Subscribe Form */}
+          <div className='flex flex-col border-2 border-black rounded-2xl p-6 space-y-2 h-auto'>
+            <h1 className='text-3xl font-normal'>PARTY PEOPLE COMMUNITY<sup className='font-medium'>TM</sup></h1>
+            <h2 className='text-xl'>Where we all belong..</h2>
+            <div className='flex flex-col border-2 border-black rounded-2xl'>
+              <input className="p-3 rounded-2xl focus:rounded-2xl" type="text" placeholder='Email' />
+              <button className='bg-white text-black text-2xl border-t-2 border-black rounded-b-2xl p-2'>JOIN</button>
             </div>
           </div>
 
-          {/* Email Signup */}
-          <div className="w-full md:w-1/3">
-            <div className="flex flex-col">
-              <input
-                type="email"
-                placeholder="Email"
-                className="p-3 bg-white text-black rounded-t-md"
+          <div className="relative flex h-80 mb-12 lg:order-first">
+            <video
+              className="lozad pointer-events-none object-contain"
+              width="100%"
+              playsInline
+              muted
+              autoPlay
+              loop
+              data-loaded="true"
+            >
+              <source
+                data-src="/videos/dancing-beer.mp4"
+                type="video/mp4"
+                src="/videos/dancing-beer.mp4"
               />
-              <button className="p-3 bg-black hover:bg-white hover:text-black hover:border transition-colors duration-300 text-white font-medium rounded-b-md">
-                SUBSCRIBE
-              </button>
-            </div>
+            </video>
+            <Image
+              src="/images/roundal.svg" // Replace with the actual path to your logo
+              alt="Party People Logo"
+              width={60}
+              height={60}
+              className="absolute w-full h-full "
+            />
           </div>
         </div>
 
-        {/* Bottom Section with Links and Smiley */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-800">
-          {/* Smiley Icon */}
-          <div className="mb-4 md:mb-0">
+
+        {/* Social Links */}
+        <div className="flex flex-col items-center justify-center gap-4 mb-8 sm:flex-row sm:space-x-6">
+          <div className="flex justify-center ">
             <Image
               src="/images/icon-head.png"
-              alt="PartyPeople Head Logo"
-              width={40}
-              height={40}
+              alt="Party People Logo"
+              width={50}
+              height={50}
+              className="h-12"
             />
           </div>
+          <div className="flex justify-center space-x-3 md:space-x-6">
+            {socials.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline transition-colors duration-300 text-xs xs:text-sm font-medium text-center"
+              >
+                {social.label}
+              </a>
+            ))}
+          </div>
+        </div>
 
-          {/* Social Links */}
-          <nav className="flex flex-wrap justify-center md:justify-end gap-6 uppercase font-medium">
-            <Link href="https://instagram.com" className="hover:text-blue-400 transition-colors">
-              Instagram
-            </Link>
-            <Link href="https://soundcloud.com" className="hover:text-blue-400 transition-colors">
-              Soundcloud
-            </Link>
-            <Link href="https://spotify.com" className="hover:text-blue-400 transition-colors">
-              Spotify
-            </Link>
-            <Link href="https://youtube.com" className="hover:text-blue-400 transition-colors">
-              Youtube
-            </Link>
-            <Link href="mailto:contact@partypeople.world" className="hover:text-blue-400 transition-colors">
-              contact@partypeople.world
-            </Link>
-          </nav>
+        {/* Copyright Section */}
+        <div className=" text-black text-center text-xs font-medium py-4">
+          © 2025 SUB CONFUSÃO, LDA. ALL RIGHTS RESERVED
         </div>
       </div>
     </footer>

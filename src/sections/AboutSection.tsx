@@ -4,8 +4,8 @@ import React from 'react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 relative">
-      <div className="container mx-auto px-10 md:px-20 lg:px-24 xl:px-28 2xl:px-32">
+    <section className="bg-white py-24 relative">
+      <div className="container mx-auto px-4 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Column - Text Content */}
           <div className="">
@@ -22,9 +22,9 @@ const AboutSection: React.FC = () => {
               data-loaded="true"
             >
               <source
-                data-src="/videos/card.mp4"
+                data-src="/videos/police.mp4"
                 type="video/mp4"
-                src="/videos/card.mp4"
+                src="/videos/police.mp4"
               />
             </video>
           </div>
