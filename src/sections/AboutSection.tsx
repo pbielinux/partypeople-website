@@ -4,52 +4,41 @@ import React from 'react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="bg-white py- relative">
-      <div className="container mx-auto px-4 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <section className="bg-white py-16 relative">
+      <div className="container mx-auto px-10 md:px-20 lg:px-24 xl:px-28 2xl:px-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-medium leading-tight">
-              Our multi-disciplinary studio<br />
-              has decades of experience<br />
-              in commercial brand creation<br />
-              and design.
+          <div className="">
+            <h2 className="text-2xl lg:w-[80%] font-medium leading-tight">
+              Our multi-disciplinary team has decades of experience in party rocking!
             </h2>
+            <video
+              className="lozad pointer-events-none w-full h-[40vh] object-contain"
+              width="200px"
+              playsInline
+              muted
+              autoPlay
+              loop
+              data-loaded="true"
+            >
+              <source
+                data-src="/videos/card.mp4"
+                type="video/mp4"
+                src="/videos/card.mp4"
+              />
+            </video>
           </div>
-          
-          {/* Middle Column - Video replacing Card Image */}
-          <div className="order-first md:order-none flex justify-center md:justify-start">
-            <div className="relative w-64 h-80">
-              <video 
-                className="lozad pointer-events-none w-full h-full object-contain" 
-                width="100%" 
-                playsInline 
-                muted 
-                autoPlay 
-                loop 
-                data-loaded="true"
-              >
-                <source 
-                  data-src="/videos/card.mp4" 
-                  type="video/mp4" 
-                  src="/videos/card.mp4"
-                />
-              </video>
-            </div>
-          </div>
-          
+
           {/* Right Column - Large Text */}
-          <div className="col-span-1 md:col-span-2 mt-10">
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-medium leading-none">
-                WE KNOW HOW<br />
-                TO PRODUCE WORK<br />
-                THAT <span className="relative inline-flex items-center">
+          <div className="">
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl font-medium leading-relaxed">
+                <span className='font-bold'>WE</span> KNOW HOW TO PRODUCE EVENTS THAT<span className="relative inline-flex items-center">
                   <span className="absolute inset-0 rounded-full border-2 border-black"></span>
                   <span className="relative px-6 font-bold">HITS BIG</span>
                 </span>
               </h1>
-              
+
               <div className="pt-6">
                 <p className="text-xl">
                   We are not defined by disciplines. However,<br />

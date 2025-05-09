@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
 
             {/* Brand Text */}
             <div className="ml-4">
-              <h2 className="text-3xl font-bold tracking-tight">ANALOGUE COMMUNITY™</h2>
+              <h2 className="text-3xl font-bold tracking-tight">PARTY PEOPLE COMMUNITY ™</h2>
               <p className="text-lg">Where creatives belong.</p>
             </div>
           </div>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 placeholder="Email"
                 className="p-3 bg-white text-black rounded-t-md"
               />
-              <button className="p-3 bg-blue-400 hover:bg-blue-500 transition-colors duration-300 text-white font-medium rounded-b-md">
+              <button className="p-3 bg-black hover:bg-white hover:text-black hover:border transition-colors duration-300 text-white font-medium rounded-b-md">
                 SUBSCRIBE
               </button>
             </div>
@@ -80,11 +80,6 @@ const Footer: React.FC = () => {
               contact@partypeople.world
             </Link>
           </nav>
-        </div>
-
-        {/* Rights Reserved Text */}
-        <div className="hidden md:block absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 origin-right">
-          <p>ALL RIGHTS RESERVED</p>
         </div>
       </div>
     </footer>

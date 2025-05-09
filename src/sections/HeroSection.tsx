@@ -1,134 +1,83 @@
 'use client';
 
-import React from 'react';
+import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
-import Link from 'next/link';
 
-const Hero: React.FC = () => {
+export default function HeroSection() {
   return (
-    <div className="bg-white text-black relative pb-12">
-      {/* Hero Content */}
-      <div className="container mx-auto px-4 md:px-12 mt-12 mb-20">
-        {/* Main Logo with Trend Report Badge */}
-        <div className="relative w-full flex justify-center mb-16">
-          <div className="relative">
-            <Image
-              src="/images/logo-h.svg"
-              alt="PartyPeople Horizontal Logo"
-              width={800}
-              height={200}
-              className="w-full md:w-auto"
-              priority
-            />
-            <div className="absolute top-0 right-0 -translate-y-6 translate-x-6 rotate-12">
-              <div className="text-green-500 font-bold leading-tight">
-                <div>TREND</div>
-                <div>REPORT-2025</div>
-              </div>
-            </div>
-          </div>
+    <section className="bg-white grid place-items-center px-4 sm:px-6 lg:px-12 py-24 font-sans">
+      <div className="max-w-6xl w-full text-center space-y-8">
+        {/* Logo */}
+        <div className="relative inline-block mx-auto w-full max-w-[500px]">
+          {/* The logo image */}
+          <Image
+            src="/images/logo-h.svg" // Replace with your real logo path
+            alt="Analogue Logo"
+            width={500}
+            height={200}
+            className="w-full"
+          />
+
+          {/* Positioned image (e.g. main-logo.png) */}
+          <Image
+            src="/images/main-logo.png"
+            alt="Trend Report 2025"
+            width={200}
+            height={120}
+            className="absolute top-4 right-0 w-[150px] md:w-[200px]"
+          />
         </div>
 
-        {/* Tagline Text */}
-        <div className="max-w-full mx-auto text-center md:text-left">
-          <div className="flex flex-col md:flex-row items-center mb-6">
-            <div className="flex items-center mb-4 md:mb-0">
-              <span className="mr-2">
-                <Image
-                  src="/images/smile-icon.png"
-                  alt="Smiley Face"
-                  width={30}
-                  height={30}
-                />
-              </span>
-              <span className="text-3xl md:text-4xl font-medium">A SERIOUSLY</span>
-            </div>
-
-            <div className="ml-0 md:ml-4 relative">
-              <div className="absolute inset-0 bg-black translate-x-0.5 translate-y-0.5 rounded px-3"></div>
-              <span className="relative inline-block bg-white border-2 border-black rounded px-3 py-1 text-3xl md:text-4xl font-medium">
-                PLAYFUL
-              </span>
-              <span className="text-lg align-top">™</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center mb-6">
-            <div className="relative mb-4 md:mb-0">
-              <div className="absolute inset-0 rounded-full border-2 border-black"></div>
-              <span className="relative text-3xl md:text-4xl font-medium px-4">BRAND</span>
-            </div>
-
-            <span className="text-3xl md:text-4xl font-medium mx-3">AND</span>
-
-            <div className="flex items-center">
-              <span className="text-3xl md:text-4xl font-medium">MOTION</span>
-              <span className="ml-2">
-                <Image
-                  src="/images/play-icon.png"
-                  alt="Play Icon"
-                  width={24}
-                  height={24}
-                />
-              </span>
-            </div>
-          </div>
-
-          <div className="mb-6">
-            <span className="text-3xl md:text-4xl font-medium text-white outline-text">STUDIO</span>
-            <span className="text-3xl md:text-4xl font-medium"> COMBINING FRESH-FORWARD</span>
-            <span className="text-3xl md:text-4xl font-medium">++</span>
-            <span className="text-3xl md:text-4xl font-medium"> THINKING</span>
-          </div>
-
-          <div className="mb-6">
-            <span className="text-3xl md:text-4xl font-medium">AND</span>
-            <span className="mx-2">
+        {/* Text Grid */}
+        <div className="grid gap-4 pt-10 text-xl sm:text-2xl md:text-3xl font-medium leading-snug">
+          <div>
+            <span className="inline-block align-middle">
               <Image
-                src="/images/diamond-icon.png"
-                alt="Diamond Icon"
-                width={30}
-                height={30}
-                className="inline-block"
-              />
-            </span>
-            <span className="text-3xl md:text-4xl font-medium"> BEAUTIFULLY CRAFTED CREATIVE TO HELP</span>
+                src="/images/icon-head.png" // Replace with your logo
+                alt="Party People Logo"
+                width={600}
+                height={120}
+                className="mx-auto w-10" />
+            </span>{' '}
+            <span className="inline-block">
+              A SERIOUSLY</span>{' '}
+            <Button>
+              <span className="text-black text-xl sm:text-2xl">PLAYFUL</span>
+            </Button>{' '}
+            <sup>™</sup>
           </div>
 
           <div>
-            <div className="inline-block relative">
-              <div className="absolute inset-0 rounded-full border-2 border-black"></div>
-              <span className="relative text-3xl md:text-4xl font-bold px-4">BRANDS</span>
-            </div>
-
-            <span className="text-3xl md:text-4xl font-medium"> BUILD </span>
-
-            <span className="inline-block mx-2">
-              <Image
-                src="/images/fist-icon.png"
-                alt="Fist Icon"
-                width={40}
-                height={40}
-                className="inline-block"
-              />
+            <span className="inline-block border border-black px-2 py-0.5 rounded-full">
+              BRAND
             </span>
-
-            <span className="text-3xl md:text-4xl font-medium"> FANDOM WORLDWIDE </span>
-
-            <span className="inline-block">
-              <Image
-                src="/images/globe-icon.png"
-                alt="Globe Icon"
-                width={40}
-                height={40}
-                className="inline-block"
-              />
+            {' '}AND
+            <span className="font-extrabold">
+              {' '}PARTY
+            </span> ▶▶
+            <span className="underline">
+              {' '}PROMOTER
             </span>
+          </div>
+
+          <div>
+            CRAFTING  ✦ EXPERIENCES
+          </div>
+
+          <div>
+            ☝️ TO PROVIDE{' '}
+            <span className="border border-black px-2 py-0.5 rounded-full">YOU</span> SPACE
+          </div>
+
+          <div>
+            TO DANCE {' '}
+            <span className="inline-block underline decoration-2 underline-offset-4">
+              ARROUND THE WORLD
+            </span>{' '}
+            🌐
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Hero;
+}

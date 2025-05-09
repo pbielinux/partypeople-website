@@ -9,6 +9,7 @@ import Navbar from '@/components/layout/Navbar';
 import MobileMenu from '@/components/layout/MobileMenu';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import VideoSection from '@/sections/VideoSection';
 
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
         onToggle={() => setIsMenuOpen(!isMenuOpen)}
       />
       <HeroSection />
+      <VideoSection />
       <AboutSection />
       <PastEventsSection />
       <CTASection />
