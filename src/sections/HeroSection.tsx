@@ -5,10 +5,8 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="bg-white py-16 relative">
-
-      
-      <div className="max-w-6xl w-full text-center space-y-8">
+    <section className="bg-white py-24 relative">
+      <div className="container max-w-6xl w-full text-center space-y-8">
         {/* Logo */}
         <div className="relative inline-block mx-auto w-full max-w-[500px]">
           {/* The logo image */}

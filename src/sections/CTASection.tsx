@@ -16,25 +16,31 @@ const CTASection: React.FC = () => {
 
           {/* Bottom left column */}
           <div className="">
-            <div className="relative w-full h-full">
-              <Image
-                src="/videos/retro-phone.webp" // Replace with your real logo path
-                alt="Analogue Logo"
-                width={500}
-                height={200}
-                className="w-full"
+          <video
+              className="lozad pointer-events-none w-full h-[40vh] object-contain"
+              width="200px"
+              playsInline
+              muted
+              autoPlay
+              loop
+              data-loaded="true"
+            >
+              <source
+                data-src="/videos/knight.mp4"
+                type="video/mp4"
+                src="/videos/knight.mp4"
               />
-            </div>
+            </video>
           </div>
 
           {/* Bottom right column */}
           <div className="flex flex-col space-y-8">
             {/* Text */}
-            <h1 className="text-7xl sm:text-8xl md:text-9xl font-medium">PLAY</h1>
+            <h1 className="text-7xl sm:text-8xl md:text-9xl font-medium">PARTY</h1>
             <Button>
               <span className="text-black text-xl sm:text-3xl font-normal">LET'S CONNECT</span>
             </Button>
-            <h2 className="text-xl lg:w-[80%] font-medium leading-tight">Hit connect and let's build brand fandom worldwide.</h2>
+            <h2 className="text-xl lg:w-[80%] font-medium leading-tight">Hit connect and let's bring the party worldwide.</h2>
           </div>
         </div>
       </div>

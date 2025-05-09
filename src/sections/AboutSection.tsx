@@ -22,9 +22,9 @@ const AboutSection: React.FC = () => {
               data-loaded="true"
             >
               <source
-                data-src="/videos/card.mp4"
+                data-src="/videos/police.mp4"
                 type="video/mp4"
-                src="/videos/card.mp4"
+                src="/videos/police.mp4"
               />
             </video>
           </div>

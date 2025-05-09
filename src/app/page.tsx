@@ -17,11 +17,11 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'WORK', path: '/work' },
-    { name: 'SERVICES', path: '/services' },
-    { name: 'STUDIO', path: '/studio' },
-    { name: 'CAREERS', path: '/careers' },
-    { name: 'PLAYROOM', path: '/playroom' },
+    { name: 'NEWS', path: '/news' },
+    { name: 'ABOUT', path: '/about' },
+    { name: 'EVENTS', path: '/events' },
+    { name: 'CONTACT', path: '/contact' },
+    { name: 'SHOP', path: '/shop' },
   ];
 
   return (
