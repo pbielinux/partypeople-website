@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="bg-white py-16 relative">
+    <section className="bg-white py-10 relative">
       <div className="container mx-auto px-4 md:px-12 ">
         <div className="grid grid-cols-2">
           {/* Top full-width item (spans both columns) */}
@@ -25,9 +25,9 @@ const CTASection: React.FC = () => {
               data-loaded="true"
             >
               <source
-                data-src="/videos/knight.mp4"
+                data-src="https://storage.googleapis.com/partypeople.world/videos/knight.mp4"
                 type="video/mp4"
-                src="/videos/knight.mp4"
+                src="https://storage.googleapis.com/partypeople.world/videos/knight.mp4"
               />
             </video>
           </div>

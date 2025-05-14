@@ -19,32 +19,32 @@ const pastEvents: PastEventItem[] = [
     id: 'party-people-01',
     title: 'PARTY PEOPLE at Those Who Dance',
     subtitle: 'CRAFTING A CINEMATIC UNIVERSE',
-    imageUrl: '/images/events/event1.jpg',
+    imageUrl: 'https://storage.googleapis.com/partypeople.world/images/events/event1.jpg',
     link: '/events'
   },
   {
     id: 'electric-state',
     title: 'PARTY PEOPLE at Those Who Dance',
     subtitle: 'The Robots Are Coming',
-    imageUrl: '/images/events/event2.jpg',
+    imageUrl: 'https://storage.googleapis.com/partypeople.world/images/events/event2.jpg',
     link: '/events'
   },
   {
     id: 'squid-game',
     title: 'PARTY PEOPLE at Those Who Dance',
     subtitle: 'The Game Will Not Stop',
-    imageUrl: '/images/events/event3.jpg',
+    imageUrl: 'https://storage.googleapis.com/partypeople.world/images/events/event3.jpg',
     link: '/events'
   }
 ];
 
 const PastEventsSection: React.FC = () => {
   return (
-    <section className="bg-white py-24 relative">
+    <section className="bg-white py-10 relative">
       <div className="container mx-auto px-4 md:px-12">
         {/* Section Header */}
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl sm:text-6xl font-medium">Past Events</h2>
+          <h2 className="text-3xl sm:text-5xl font-medium">Past Events</h2>
           <Link href="/events" className="xs:text-xl sm:text-2xl hover:underline">
             View all
           </Link>

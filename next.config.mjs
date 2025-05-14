@@ -3,6 +3,9 @@ const config = {
   plugins: {
     tailwindcss: {},
   },
+  images: {
+    domains: ['storage.googleapis.com'],
+  },
 };
 
 export default config;

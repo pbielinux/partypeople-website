@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({ children, onClick, className }) 
     <motion.button
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
-      className={`relative inline-flex w-auto items-center justify-center px-1 py-2 font-semibold text-black bg-white border-2 border-black rounded-md
+      className={`relative inline-flex w-auto items-center justify-center px-1 py-1 font-semibold text-black bg-white border-2 border-black rounded-md
               shadow-[8px_8px_0_0_rgba(0,0,0,1)] transition-all hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] active:shadow-[2px_2px_0_0_rgba(0,0,0,1)]
               ${className ?? ''}`}
     >

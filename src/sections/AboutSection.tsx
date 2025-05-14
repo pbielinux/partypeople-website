@@ -4,7 +4,7 @@ import React from 'react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="bg-white py-24 relative">
+    <section className="bg-white py-10 relative">
       <div className="container mx-auto px-4 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Column - Text Content */}
@@ -22,9 +22,9 @@ const AboutSection: React.FC = () => {
               data-loaded="true"
             >
               <source
-                data-src="/videos/police.mp4"
+                data-src="https://storage.googleapis.com/partypeople.world/videos/police.mp4"
                 type="video/mp4"
-                src="/videos/police.mp4"
+                src="https://storage.googleapis.com/partypeople.world/videos/police.mp4"
               />
             </video>
           </div>
@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
           {/* Right Column - Large Text */}
           <div className="">
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-5xl md:text-5xl font-medium leading-relaxed">
+              <h1 className="text-3xl sm:text-5xl xl:text-7xl font-medium leading-normal">
                 <span className='font-bold'>WE</span> KNOW HOW TO PRODUCE EVENTS THAT<span className="relative inline-flex items-center">
                   <span className="absolute inset-0 rounded-full border-2 border-black"></span>
                   <span className="relative px-6 font-bold">HITS BIG</span>

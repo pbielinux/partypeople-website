@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const socials = [
   { label: 'INSTAGRAM', href: 'https://www.instagram.com/we.partypeople/' },
-  { label: 'YOUTUBE', href: 'https://YOUTUBE.COM' },
+  { label: 'YOUTUBE', href: 'https://www.youtube.com/@we.partypeople' },
   { label: 'SPOTIFY', href: 'https://open.spotify.com/user/31udm6ap4q6moiyjdm3rwkgywvrm' },
   { label: 'SOUNDCLOUD', href: 'https://soundcloud.com/partypeople-world' },
 ];
@@ -11,15 +11,15 @@ const socials = [
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white text-black w-full">
-      <div className="container mx-auto px-4 py-20 justify-center">
+      <div className="container mx-auto px-4 py-10 justify-center">
         <div className='grid grid-cols-1 lg:grid-cols-2 items-start'>
           {/* Newsletter Subscribe Form */}
-          <div className='flex flex-col border-2 border-black rounded-2xl p-6 space-y-2 h-auto'>
-            <h1 className='text-3xl font-normal'>PARTY PEOPLE COMMUNITY<sup className='font-medium'>TM</sup></h1>
-            <h2 className='text-xl'>Where we all belong..</h2>
+          <div className='flex flex-col border-2 border-black rounded-2xl p-4 space-y-2 h-auto'>
+            <h1 className='text-2xl sm:text-4xl font-bold'>PARTY PEOPLE COMMUNITY<sup className='font-thin'>TM</sup></h1>
+            <h2 className='text-lg'>Where we all belong..</h2>
             <div className='flex flex-col border-2 border-black rounded-2xl'>
-              <input className="p-3 rounded-2xl focus:rounded-2xl" type="text" placeholder='Email' />
-              <button className='bg-white text-black text-2xl border-t-2 border-black rounded-b-2xl p-2'>JOIN</button>
+              <input className="p-3 rounded-t-2xl focus:rounded-t-2xl focus:border-black" type="text" placeholder='Email' />
+              <button className='bg-white text-black text-xl sm:text-2xl md:text-3xl border-t-2 border-black rounded-b-2xl p-2'>JOIN</button>
             </div>
           </div>
 
@@ -34,17 +34,17 @@ const Footer: React.FC = () => {
               data-loaded="true"
             >
               <source
-                data-src="/videos/dancing-beer.mp4"
+                data-src="https://storage.googleapis.com/partypeople.world/videos/dancing-beer.mp4"
                 type="video/mp4"
-                src="/videos/dancing-beer.mp4"
+                src="https://storage.googleapis.com/partypeople.world/videos/dancing-beer.mp4"
               />
             </video>
             <Image
-              src="/images/roundal.svg" // Replace with the actual path to your logo
+              src="https://storage.googleapis.com/partypeople.world/images/roundal.svg" // Replace with the actual path to your logo
               alt="Party People Logo"
               width={60}
               height={60}
-              className="absolute w-full h-full "
+              className="absolute w-full h-full animate-spinslow"
             />
           </div>
         </div>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-4 mb-8 sm:flex-row sm:space-x-6">
           <div className="flex justify-center ">
             <Image
-              src="/images/icon-head.png"
+              src="https://storage.googleapis.com/partypeople.world/images/icon-head.png"
               alt="Party People Logo"
               width={50}
               height={50}

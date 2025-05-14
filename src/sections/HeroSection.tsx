@@ -5,13 +5,13 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="bg-white py-20 relative">
+    <section className="bg-white py-28 relative">
       <div className="container mx-auto px-4 md:px-12 max-w-6xl w-full text-center space-y-8">
         {/* Logo */}
         <div className="relative inline-block mx-auto w-full max-w-[500px]">
           {/* The logo image */}
           <Image
-            src="/images/logo-h.svg" // Replace with your real logo path
+            src="https://storage.googleapis.com/partypeople.world/images/logo-h.svg" // Replace with your real logo path
             alt="Analogue Logo"
             width={500}
             height={200}
@@ -20,7 +20,7 @@ export default function HeroSection() {
 
           {/* Positioned image (e.g. main-logo.png) */}
           <Image
-            src="/images/main-logo.png"
+            src="https://storage.googleapis.com/partypeople.world/images/main-logo.png"
             alt="Trend Report 2025"
             width={200}
             height={120}
@@ -33,7 +33,7 @@ export default function HeroSection() {
           <div>
             <span className="inline-block align-middle">
               <Image
-                src="/images/icon-head.png" // Replace with your logo
+                src="https://storage.googleapis.com/partypeople.world/images/icon-head.png" // Replace with your logo
                 alt="Party People Logo"
                 width={600}
                 height={120}
@@ -54,9 +54,9 @@ export default function HeroSection() {
             {' '}AND
             <span className="font-extrabold">
               {' '}PARTY
-            </span> ▶▶
+            </span> ▶▶{' '}
             <span className="underline">
-              {' '}PROMOTER
+              PROMOTER
             </span>
           </div>
 

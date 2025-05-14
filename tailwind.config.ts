@@ -34,6 +34,7 @@ const config: Config = {
       },
       animation: {
         marquee: 'marquee 30s linear infinite',
+        spinslow: 'spin 30s linear infinite',
       },
       keyframes: {
         marquee: {
