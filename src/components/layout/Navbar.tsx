@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                 <div className="flex flex-row justify-center items-center space-x-2">
                     <Image
                         className='hidden lg:block'
-                        src="/images/icon-head.png"
+                        src="https://storage.googleapis.com/partypeople.world/images/icon-head.png"
                         alt="PartyPeople Head Logo"
                         width={40}
                         height={40}

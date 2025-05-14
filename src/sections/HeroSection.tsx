@@ -19,7 +19,7 @@ export default function HeroSection() {
           {/* Positioned image (e.g. main-logo.png) */}
           <Image
             src="https://storage.googleapis.com/partypeople.world/images/main-logo.png"
-            alt="Trend Report 2025"
+            alt="Signed Party People Logo"
             width={200}
             height={120}
             className="absolute top-4 right-0 w-[150px] md:w-[200px]"
