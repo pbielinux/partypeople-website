@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 const AboutSection: React.FC = () => {
@@ -32,7 +30,7 @@ const AboutSection: React.FC = () => {
           {/* Right Column - Large Text */}
           <div className="">
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-5xl xl:text-7xl font-medium leading-normal">
+              <h1 className="text-3xl sm:text-5xl xl:text-7xl font-medium leading-relaxed">
                 <span className='font-bold'>WE</span> KNOW HOW TO PRODUCE EVENTS THAT<span className="relative inline-flex items-center">
                   <span className="absolute inset-0 rounded-full border-2 border-black"></span>
                   <span className="relative px-6 font-bold">HITS BIG</span>

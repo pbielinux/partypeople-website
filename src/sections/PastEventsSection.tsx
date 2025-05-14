@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -43,7 +41,7 @@ const PastEventsSection: React.FC = () => {
     <section className="bg-white py-10 relative">
       <div className="container mx-auto px-4 md:px-12">
         {/* Section Header */}
-        <div className="flex justify-between items-center mb-12">
+        <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl sm:text-5xl font-medium">Past Events</h2>
           <Link href="/events" className="xs:text-xl sm:text-2xl hover:underline">
             View all

@@ -1,12 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import { socials } from '@/lib/data';
 
-const socials = [
-  { label: 'INSTAGRAM', href: 'https://www.instagram.com/we.partypeople/' },
-  { label: 'YOUTUBE', href: 'https://www.youtube.com/@we.partypeople' },
-  { label: 'SPOTIFY', href: 'https://open.spotify.com/user/31udm6ap4q6moiyjdm3rwkgywvrm' },
-  { label: 'SOUNDCLOUD', href: 'https://soundcloud.com/partypeople-world' },
-];
 
 const Footer: React.FC = () => {
   return (
@@ -15,7 +10,7 @@ const Footer: React.FC = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 items-start'>
           {/* Newsletter Subscribe Form */}
           <div className='flex flex-col border-2 border-black rounded-2xl p-4 space-y-2 h-auto'>
-            <h1 className='text-2xl sm:text-4xl font-bold'>PARTY PEOPLE COMMUNITY<sup className='font-thin'>TM</sup></h1>
+            <h1 className='text-2xl sm:text-4xl'>PARTY PEOPLE COMMUNITY<sup className='font-thin'>TM</sup></h1>
             <h2 className='text-lg'>Where we all belong..</h2>
             <div className='flex flex-col border-2 border-black rounded-2xl'>
               <input className="p-3 rounded-t-2xl focus:rounded-t-2xl focus:border-black" type="text" placeholder='Email' />

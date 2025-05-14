@@ -3,24 +3,16 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { socials, navItems } from '@/lib/data';
 
 type MobileMenuProps = {
-    navItems: { name: string; path: string }[];
     isMenuOpen: boolean;
-    onToggle: () => void;
 };
 
-const socials = [
-    { label: 'INSTAGRAM', href: 'https://www.instagram.com/we.partypeople/' },
-    { label: 'YOUTUBE', href: 'https://www.youtube.com/@we.partypeople' },
-    { label: 'SPOTIFY', href: 'https://open.spotify.com/user/31udm6ap4q6moiyjdm3rwkgywvrm' },
-    { label: 'SOUNDCLOUD', href: 'https://soundcloud.com/partypeople-world' },
-];
-
-const MobileMenu: React.FC<MobileMenuProps> = ({ navItems, isMenuOpen, onToggle }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen }) => {
     return (
         <div
-            className={`lg:hidden fixed top-0 left-0 w-full h-full bg-white z-40 transform transition-transform duration-500 ease-in-out py-10 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`lg:hidden fixed top-0 left-0 w-full h-full bg-white z-10 transform transition-transform duration-500 ease-in-out py-10 ${isMenuOpen ? 'translate-y-14 md:translate-y-20' : '-translate-y-full'}`}
         >
             <div className="flex flex-col justify-between xs:pt-10 h-full gap-5">
                 {/* Page Links */}
@@ -31,7 +23,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ navItems, isMenuOpen, onToggle 
                         <Link
                             key={item.name}
                             href={item.path}
-                            onClick={onToggle}
+                            onClick={() => (false)} // Close the menu on link click"
                             className="hover:underline transition-all"
                         >
                             {item.name}
@@ -40,7 +32,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ navItems, isMenuOpen, onToggle 
                 </div>
 
                 {/* Social Links */}
-                <div className={`flex flex-col items-center justify-center gap-4 mb-8 sm:flex-row sm:space-x-6 transition-opacity duration-500 delay-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`flex flex-col items-center justify-center gap-4 mb-20 sm:flex-row sm:space-x-6 transition-opacity duration-500 delay-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}>
                     <div className="flex justify-center ">
                         <Image
                             src="https://storage.googleapis.com/partypeople.world/images/icon-head.png"

@@ -1,24 +1,25 @@
 'use client';
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '../ui/Button';
 import Image from 'next/image';
+import { navItems } from '@/lib/data';
+import MobileMenu from './MobileMenu';
 
-type NavProps = {
-    navItems: { name: string; path: string }[];
-    pathname: string;
-    isMenuOpen: boolean;
-    onToggle: () => void;
-};
 
-const Navbar: React.FC<NavProps> = ({ navItems, pathname, isMenuOpen, onToggle }) => {
+
+const Navbar: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
+
     return (
         <nav className="fixed top-0 left-0 w-full bg-white z-50">
-            <div className="h-14 md:h-20 flex items-center justify-between py-4 px-4">
+            <div className="h-14 md:h-20 flex items-center justify-between py-4 px-4 z-50">
                 {/* Mobile menu button */}
                 <div className="lg:hidden">
-                    <Button onClick={onToggle}>
+                    <Button onClick={() => setIsMenuOpen(prev => !prev)}>
                         <p className="text-gray-800 text-xs md:text-sm min-w-[60px] font-medium">
                             {isMenuOpen ? 'CLOSE' : 'MENU'}
                         </p>
@@ -62,6 +63,7 @@ const Navbar: React.FC<NavProps> = ({ navItems, pathname, isMenuOpen, onToggle }
                     </Button>
                 </div>
             </div>
+            <MobileMenu isMenuOpen={isMenuOpen}/>
         </nav>
     );
 };
