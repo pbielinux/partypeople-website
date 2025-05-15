@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button';
+import Image from 'next/image';
 
 const CTASection: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const CTASection: React.FC = () => {
 
           {/* Bottom left column */}
           <div className="">
-          <video
+            <video
               className="lozad pointer-events-none w-full h-[35vh] object-contain"
               width="200px"
               playsInline
@@ -41,7 +42,6 @@ const CTASection: React.FC = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };

@@ -1,0 +1,52 @@
+.
+├── Dockerfile
+├── README.md
+├── eslint.config.js
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── project-structure.txt
+├── public
+│   ├── images
+│   │   └── main-logo.svg
+│   └── videos
+├── src
+│   ├── app
+│   │   ├── about
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── news
+│   │   │   ├── [slug]
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── not-found.tsx
+│   │   └── page.tsx
+│   ├── components
+│   │   ├── layout
+│   │   │   ├── Footer.tsx
+│   │   │   ├── MobileMenu.tsx
+│   │   │   └── Navbar.tsx
+│   │   └── ui
+│   │       ├── Button.tsx
+│   │       └── Marquee.tsx
+│   ├── lib
+│   │   ├── data.ts
+│   │   └── fbpixel.ts
+│   └── sections
+│       ├── AboutSection.tsx
+│       ├── CTASection.tsx
+│       ├── HeroSection.tsx
+│       ├── PastEventsSection.tsx
+│       ├── VideoSection.tsx
+│       └── about
+│           ├── IntroSection.tsx
+│           ├── GallerySection.tsx
+│           └── OurJourneySection.tsx
+├── tailwind.config.ts
+└── tsconfig.json
+
+15 directories, 37 files

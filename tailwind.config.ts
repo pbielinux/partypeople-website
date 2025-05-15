@@ -14,6 +14,7 @@ const config: Config = {
       md: '768px',   // Tablets (portrait)
       lg: '1024px',  // Tablets (landscape) or small laptops
       xl: '1280px',  // Desktops
+      xxl: '1440px',  // Wide desktops
     },
     extend: {
       fontFamily: {
@@ -48,6 +49,10 @@ const config: Config = {
       transitionDuration: {
         '500': '500ms',
       },
+      blur: {
+        xs: '2px',   // custom minimal blur
+        xxs: '1px' // even more subtle
+      }
     },
   },
   plugins: [],

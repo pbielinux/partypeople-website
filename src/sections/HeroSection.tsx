@@ -18,7 +18,7 @@ export default function HeroSection() {
 
           {/* Positioned image (e.g. main-logo.png) */}
           <Image
-            src="https://storage.googleapis.com/partypeople.world/images/main-logo.png"
+            src="/images/main-logo.png"
             alt="Signed Party People Logo"
             width={200}
             height={120}
