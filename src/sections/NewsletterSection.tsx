@@ -4,9 +4,9 @@ import Image from 'next/image';
 const NewsletterSection: React.FC = () => {
   return (
     <section className="bg-white py-10 relative">
-      <div className="container mx-auto px-4 md:px-12 ">
+      <div className="container flex flex-col lg:flex-row mx-auto px-4 md:px-12 items-center justify-center">
         {/* Newsletter Subscribe Form */}
-        <div className='flex flex-col border-2 border-black rounded-2xl p-4 space-y-2 h-auto'>
+        <div className='flex flex-col border-2 border-black rounded-2xl p-4 space-y-2'>
           <h1 className='text-2xl sm:text-4xl'>PARTY PEOPLE COMMUNITY<sup className='font-thin'>TM</sup></h1>
           <h2 className='text-lg'>Where we all belong..</h2>
           <div className='flex flex-col border-2 border-black rounded-2xl'>

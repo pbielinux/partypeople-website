@@ -18,7 +18,7 @@ export default function HeroSection() {
 
           {/* Positioned image (e.g. main-logo.png) */}
           <Image
-            src="/images/main-logo.png"
+            src="/images/main-logo.svg"
             alt="Signed Party People Logo"
             width={200}
             height={120}

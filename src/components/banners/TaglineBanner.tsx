@@ -3,15 +3,16 @@ import Image from 'next/image';
 
 export default function TaglineBanner() {
   return (
-    <div className='w-full h-full relative overflow-hidden'>
+    <div className='w-full relative overflow-hidden'>
       {/* Fullscreen Background */}
-      <Image
-        src="/images/about/Picture1.jpg"
-        alt="Background"
-        fill
-        className="object-cover z-0"
-        priority
-      />
+      <div className='relative w-full aspect-[16/9]'>
+        <Image
+          src="/images/09.jpg"
+          alt="Background"
+          fill
+          priority
+        />
+      </div>
 
       {/* Centered content */}
       <div className="absolute inset-0 z-20 flex items-center justify-center">
